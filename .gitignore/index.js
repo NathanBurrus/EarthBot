@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 var prefix = "/";
 
-client.login("NDY0MTAyNTk1MjA0NjEyMDk2.Dh6FDg.eze4f5cTxTDbs0OPDGvsvYrvQCo");
+client.login("NDY0NTAyNTk5MjIwMTk5NDQ0.Dh_5TQ.ahAOujaS60AJTdL57vWiiZWf8E4");
 
 client.on("ready", () => {
     console.log("bot ready")
@@ -24,6 +24,28 @@ if(message.content === prefix + "menu"){
     message.channel.sendMessage(site_embed);
     console.log("menu send")
 }
+
+if(message.content === prefix + "admin"){
+    var infos_embed = new Discord.RichEmbed()
+    .setColor("#660033")
+    .addField("/ban", "ban @")
+    .addField("/kick", "kick @")
+    .addField("/mute et /unmute", "/mute ou /unmute @")
+    .setFooter("EarthSky - Serveur minecraft 1.12.2")
+    message.channel.sendMessage(infos_embed);
+    console.log("infos menu send succefuly !") 
+} 
+
+if(message.content === prefix + "aide"){
+    var infos_embed = new Discord.RichEmbed()
+    .setColor("#660033")
+    .addField("/site", "")
+    .addField("/boutique", "")
+    .addField("/forum", "")
+    .setFooter("EarthSky - Serveur minecraft 1.12.2")
+    message.channel.sendMessage(infos_embed);
+    console.log("infos menu send succefuly !") 
+} 
 
 //custom commandes
 //all players
@@ -47,14 +69,12 @@ if(message.content === prefix + "menu"){
         message.channel.sendMessage(infos_embed);
         console.log("infos menu send succefuly !") 
     } 
-
-    if(message.content === prefix + "admin"){
+    
+    if(message.content === prefix + "forum"){
         var infos_embed = new Discord.RichEmbed()
         .setColor("#660033")
-        .setTitle("admin menu")
-        .addField("/ban", "ban @")
-        .addField("/kick", "kick @")
-        .addField("/mute et /unmute", "/mute ou /unmute @")
+        .setTitle("boutique")
+        .addField("http://earthsky.fr/boutique.php", "lien vers notre boutique")
         .setFooter("EarthSky - Serveur minecraft 1.12.2")
         message.channel.sendMessage(infos_embed);
         console.log("infos menu send succefuly !") 
