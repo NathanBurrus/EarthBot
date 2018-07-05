@@ -17,7 +17,7 @@ client.on('message', message => {
 //admin et joueur
 
 if(message.content === prefix + "menu"){
-    var site_embed = new Discord.RichEmbed() 
+    var menu_embed = new Discord.RichEmbed() 
     .setColor("#000000")
     .addField(":interrobang: /aide", "Commande d'aide")
     .addField(":wrench: /admin", "commandes d'Admin")
