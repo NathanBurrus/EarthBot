@@ -12,7 +12,8 @@ client.on("ready", () => {
 });
 
 client.on('message', message => {
-//menu global
+
+    //menu global
 //admin et joueur
 
 if(message.content === prefix + "menu"){
@@ -21,64 +22,34 @@ if(message.content === prefix + "menu"){
     .addField(":interrobang: /aide", "Commande d'aide")
     .addField(":wrench: /admin", "commandes d'Admin")
     .setFooter("EarthSky - Serveur minecraft 1.12.2")
-    message.channel.sendMessage(site_embed);
+    message.channel.sendMessage(muenu_embed);
     console.log("menu send")
 }
 
 if(message.content === prefix + "admin"){
-    var infos_embed = new Discord.RichEmbed()
+    var admin_embed = new Discord.RichEmbed()
     .setColor("#660033")
     .addField("/ban", "ban @")
     .addField("/kick", "kick @")
     .addField("/mute et /unmute", "/mute ou /unmute @")
     .setFooter("EarthSky - Serveur minecraft 1.12.2")
-    message.channel.sendMessage(infos_embed);
-    console.log("infos menu send succefuly !") 
+    message.channel.sendMessage(admin_embed);
+    console.log("admin menu send!") 
 } 
 
 if(message.content === prefix + "aide"){
-    var infos_embed = new Discord.RichEmbed()
+    var aide_embed = new Discord.RichEmbed()
     .setColor("#660033")
-    .addField("/site", "")
-    .addField("/boutique", "")
-    .addField("/forum", "")
+    .addField("site", "http://earthsky.fr/")
+    .addField("boutique", "http://earthsky.fr/boutique.php")
+    .addField("forum", "http://earthsky.fr/forum/index.php")
     .setFooter("EarthSky - Serveur minecraft 1.12.2")
-    message.channel.sendMessage(infos_embed);
-    console.log("infos menu send succefuly !") 
+    message.channel.sendMessage(aide_embed);
+    console.log("aide menu send") 
 } 
 
 //custom commandes
-//all players
 
-    if(message.content === prefix + "site"){
-        var site_embed = new Discord.RichEmbed() 
-        .setColor("#000000")
-        .setTitle("notre site")
-        .addField("http://earthsky.fr/", "lien vers le site")
-        .setFooter("EarthSky - Serveur minecraft 1.12.2")
-        message.channel.sendMessage(site_embed);
-        console.log("site link send")
-    }
-
-    if(message.content === prefix + "boutique"){
-        var infos_embed = new Discord.RichEmbed()
-        .setColor("#660033")
-        .setTitle("boutique")
-        .addField("http://earthsky.fr/boutique.php", "lien vers notre boutique")
-        .setFooter("EarthSky - Serveur minecraft 1.12.2")
-        message.channel.sendMessage(infos_embed);
-        console.log("infos menu send succefuly !") 
-    } 
-    
-    if(message.content === prefix + "forum"){
-        var infos_embed = new Discord.RichEmbed()
-        .setColor("#660033")
-        .setTitle("boutique")
-        .addField("http://earthsky.fr/boutique.php", "lien vers notre boutique")
-        .setFooter("EarthSky - Serveur minecraft 1.12.2")
-        message.channel.sendMessage(infos_embed);
-        console.log("infos menu send succefuly !") 
-    } 
 //cmds modération
 //role avec perm de ban kick manager message
 
