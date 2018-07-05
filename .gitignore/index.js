@@ -22,7 +22,7 @@ if(message.content === prefix + "menu"){
     .addField(":interrobang: /aide", "Commande d'aide")
     .addField(":wrench: /admin", "commandes d'Admin")
     .setFooter("EarthSky - Serveur minecraft 1.12.2")
-    message.channel.sendMessage(muenu_embed);
+    message.channel.sendMessage(menu_embed);
     console.log("menu send")
 }
 
