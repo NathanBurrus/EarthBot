@@ -8,13 +8,22 @@ client.login("NDY0MTAyNTk1MjA0NjEyMDk2.Dh6FDg.eze4f5cTxTDbs0OPDGvsvYrvQCo");
 
 client.on("ready", () => {
     console.log("bot ready")
-    client.user.setGame("Besion d'aide ? /aide");
+    client.user.setGame("Besion d'aide ? /menu");
 });
 
 client.on('message', message => {
 //menu global
 //admin et joueur
 
+if(message.content === prefix + "menu"){
+    var site_embed = new Discord.RichEmbed() 
+    .setColor("#000000")
+    .addField(":interrobang: /aide", "Commande d'aide")
+    .addField(":wrench: /admin", "commandes d'Admin")
+    .setFooter("EarthSky - Serveur minecraft 1.12.2")
+    message.channel.sendMessage(site_embed);
+    console.log("menu send")
+}
 
 //custom commandes
 //all players
